@@ -1,6 +1,7 @@
 package com.tws.refactoring.extract_method;
 
 import com.tws.refactoring.extract_variable.BannerRender;
+import com.tws.refactoring.extract_variable.PriceCalculator;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -51,6 +52,21 @@ public class OwingPrinterTest {
 
         //Then
         assertEquals("banner",result);
+
+    }
+
+    @Test
+    public void should_return_111_input_111() {
+
+        //Given
+        PriceCalculator priceCalculator = new PriceCalculator();
+        int quantity = 10;
+        int itemPrice = 5;
+        //When
+        double result = priceCalculator.getPrice(quantity, itemPrice);
+
+        //Then
+        assertEquals(111,result,10);
 
     }
 }
