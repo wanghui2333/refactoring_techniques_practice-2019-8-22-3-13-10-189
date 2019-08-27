@@ -56,7 +56,7 @@ public class OwingPrinterTest {
     }
 
     @Test
-    public void should_return_111_input_111() {
+    public void should_return_55_input_10_5() {
 
         //Given
         PriceCalculator priceCalculator = new PriceCalculator();
@@ -66,7 +66,7 @@ public class OwingPrinterTest {
         double result = priceCalculator.getPrice(quantity, itemPrice);
 
         //Then
-        assertEquals(111,result,10);
+        assertEquals(55,result,0.0);
 
     }
 }
